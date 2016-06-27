@@ -83,37 +83,26 @@ public class MainActivity extends BaseActivity {
 
                 switch (checkedId) {
                     case R.id.home_tab_homepage:
-                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
-
                         //将当前的Fragment设置为HomepageFragment
                         viewpager.setCurrentItem(0,true);
                         break;
 
                     case R.id.home_tab_discovery:
-
-                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
-
                         //将当前的Fragment设置为DiscoveryFragment
                         viewpager.setCurrentItem(1,true);
                         break;
 
                     case R.id.home_tab_release:
-                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
-
                         //将当前的Fragment设置为ReleaseFragment
                         viewpager.setCurrentItem(2,true);
                         break;
 
                     case R.id.home_tab_service:
-                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
-
                         //将当前的Fragment设置为ServiceFragment
                         viewpager.setCurrentItem(3,true);
                         break;
 
                     case R.id.home_tab_me:
-                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
-
                         //将当前的Fragment设置为MeFragment
                         viewpager.setCurrentItem(4,true);
                         break;
