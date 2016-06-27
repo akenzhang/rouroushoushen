@@ -9,6 +9,7 @@
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:gravity="center">
+
         <RadioButton
             android:id="@+id/home_tab_homepage"
             style="@style/home_tab"

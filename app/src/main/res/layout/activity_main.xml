@@ -3,13 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
     tools:context="akenzhang.rouroushoushen.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
@@ -21,8 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="0.2dp"
             android:background="@color/color_bottom_tab"/>
+
         <!--底部菜单-->
         <include layout="@layout/home_bottom_tab"/>
-    </LinearLayout>
 
 </LinearLayout>

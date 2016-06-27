@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
 import akenzhang.rouroushoushen.homepage.Guide_Pages;
@@ -23,7 +24,14 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewpager;
     private Fragment fragments[];
 
-    private RadioButton btnHomePage;
+    //申明RadionButton对象
+    private RadioGroup rgHomeTab;
+    private RadioButton btnHomePage; //home_tab_homepage
+    private RadioButton btnHomeDiscovery;  //home_tab_discovery
+    private RadioButton btnHomeRelease; //home_tab_release
+    private RadioButton btnHomeService; //home_tab_service
+    private RadioButton btnHomeMe; //home_tab_me
+
 
     @Override
     protected int getLayout() {
@@ -32,9 +40,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
+        //初始化ViewPager viewpager
         viewpager = (ViewPager) this.findViewById(R.id.viewpager);
 
-        btnHomePage = (RadioButton) this.findViewById(R.id.home_tab_homepage);
+        //初始化RadioButton按钮
+        rgHomeTab = (RadioGroup) this.findViewById(R.id.home_tab);
+        btnHomePage = (RadioButton) this.findViewById(R.id.home_tab_homepage); //home_radiobtn_homepage
+        btnHomeDiscovery = (RadioButton) this.findViewById(R.id.home_tab_discovery);  //home_tab_discovery
+        btnHomeRelease = (RadioButton) this.findViewById(R.id.home_tab_release); //home_tab_release
+        btnHomeService = (RadioButton) this.findViewById(R.id.home_tab_service); //home_tab_service
+        btnHomeMe = (RadioButton) this.findViewById(R.id.home_tab_me); //home_tab_me
     }
 
     @Override
@@ -43,9 +59,9 @@ public class MainActivity extends BaseActivity {
         fragments = new Fragment[]{
                 new HomepageFragment()
                 ,new DiscoveryFragment()
-                ,new  MeFragment()
                 ,new ReleaseFragment()
                 ,new ServiceFragment()
+                ,new MeFragment()
         };
 
         MyViewPagerAdapter adapter = new MyViewPagerAdapter((getSupportFragmentManager()));
@@ -61,13 +77,53 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initListener() {
 
-        btnHomePage.setOnClickListener(new View.OnClickListener() {
+        rgHomeTab.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"",Toast.LENGTH_SHORT).show();
-                viewpager.setCurrentItem(0,true);
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId) {
+                    case R.id.home_tab_homepage:
+                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
+
+                        //将当前的Fragment设置为HomepageFragment
+                        viewpager.setCurrentItem(0,true);
+                        break;
+
+                    case R.id.home_tab_discovery:
+
+                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
+
+                        //将当前的Fragment设置为DiscoveryFragment
+                        viewpager.setCurrentItem(1,true);
+                        break;
+
+                    case R.id.home_tab_release:
+                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
+
+                        //将当前的Fragment设置为ReleaseFragment
+                        viewpager.setCurrentItem(2,true);
+                        break;
+
+                    case R.id.home_tab_service:
+                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
+
+                        //将当前的Fragment设置为ServiceFragment
+                        viewpager.setCurrentItem(3,true);
+                        break;
+
+                    case R.id.home_tab_me:
+                        Toast.makeText(MainActivity.this,String.valueOf(checkedId),Toast.LENGTH_SHORT).show();
+
+                        //将当前的Fragment设置为MeFragment
+                        viewpager.setCurrentItem(4,true);
+                        break;
+
+                    default:
+                        break;
+                }
             }
-            });
+        });
+
     }
 
     @Override
