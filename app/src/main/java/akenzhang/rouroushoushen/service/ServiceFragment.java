@@ -15,7 +15,7 @@ public class ServiceFragment extends BaseFragment
 
     @Override
     protected int getLayout() {
-        return R.layout.fragment_layout;
+        return R.layout.service_fragment_default_layout;
     }
 
     @Override

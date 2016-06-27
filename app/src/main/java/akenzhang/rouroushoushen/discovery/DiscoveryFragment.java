@@ -9,7 +9,7 @@ import akenzhang.rouroushoushen.ui.BaseFragment;
 public class DiscoveryFragment extends BaseFragment {
     @Override
     protected int getLayout() {
-        return R.layout.fragment_layout;
+        return R.layout.discovery_fragment_default_layout;
     }
 
     @Override

@@ -11,7 +11,7 @@ public class MeFragment extends BaseFragment {
 
     @Override
     protected int getLayout() {
-        return R.layout.fragment_layout;
+        return R.layout.me_fragment_default_layout;
     }
 
     @Override

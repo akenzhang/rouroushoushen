@@ -19,6 +19,6 @@
             android:background="@color/color_bottom_tab"/>
 
         <!--底部菜单-->
-        <include layout="@layout/home_bottom_tab"/>
+        <include layout="@layout/activity_main_bottom_tab"/>
 
 </LinearLayout>
