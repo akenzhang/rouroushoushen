@@ -6,10 +6,25 @@
     tools:context="akenzhang.rouroushoushen.homepage.Guide_Pages">
 
     <android.support.v4.view.ViewPager
+        android:id="@+id/id_guid_Pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
     </android.support.v4.view.ViewPager>
+    <Button
+        android:id="@+id/id_btn_sing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="100dp"
+        android:textColor="#FFE7ED"
+        android:background="@drawable/btn_signstyle"
+
+        android:visibility="gone"
+
+        android:text="开始甩肉吧"/>
 
 </RelativeLayout>
