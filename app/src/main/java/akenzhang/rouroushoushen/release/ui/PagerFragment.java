@@ -9,7 +9,7 @@ import akenzhang.rouroushoushen.ui.BaseFragment;
 public class PagerFragment extends BaseFragment{
     @Override
     protected int getLayout() {
-        return R.layout.fragment_bottom;
+        return 0;
     }
 
     @Override
