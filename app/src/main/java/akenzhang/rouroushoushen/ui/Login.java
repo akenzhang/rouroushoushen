@@ -11,7 +11,7 @@ import akenzhang.rouroushoushen.R;
 /**
  * Created by Administrator on 2016/6/27 0027.
  */
-public class logon extends AppCompatActivity{
+public class Login extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logon);
