@@ -10,14 +10,14 @@ import java.util.List;
  * Auther Created by xzl on 2016/6/15 11:13.
  * E-mail zuliang_xie@sina.com
  */
-public class MyViewPagerAdapter extends FragmentStatePagerAdapter {
+public class MainActivityViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private Fragment mFragmentList[];
     public void setmFragmentList(Fragment mFragmentList[]) {
         this.mFragmentList = mFragmentList;
     }
 
-    public MyViewPagerAdapter(FragmentManager fm) {
+    public MainActivityViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 

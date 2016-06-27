@@ -1,23 +1,17 @@
 package akenzhang.rouroushoushen;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
+
 import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
-import akenzhang.rouroushoushen.homepage.Guide_Pages;
 import akenzhang.rouroushoushen.homepage.HomepageFragment;
 import akenzhang.rouroushoushen.me.MeFragment;
 import akenzhang.rouroushoushen.release.ReleaseFragment;
 import akenzhang.rouroushoushen.service.ServiceFragment;
 import akenzhang.rouroushoushen.ui.BaseActivity;
-import akenzhang.rouroushoushen.ui.BaseFragment;
-import akenzhang.rouroushoushen.ui.MyViewPagerAdapter;
+import akenzhang.rouroushoushen.ui.MainActivityViewPagerAdapter;
 
 public class MainActivity extends BaseActivity {
 
@@ -64,7 +58,7 @@ public class MainActivity extends BaseActivity {
                 ,new MeFragment()
         };
 
-        MyViewPagerAdapter adapter = new MyViewPagerAdapter((getSupportFragmentManager()));
+        MainActivityViewPagerAdapter adapter = new MainActivityViewPagerAdapter((getSupportFragmentManager()));
 
         //将Fragment集合传给adapter
         adapter.setmFragmentList(fragments);
