@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
 import akenzhang.rouroushoushen.homepage.Guide_Pages;
 import akenzhang.rouroushoushen.homepage.HomepageFragment;
