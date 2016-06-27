@@ -27,17 +27,6 @@ public class MainActivity extends BaseActivity {
     private RadioButton btnHomePage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(getLayout());
-        initView();
-        initVariable();
-        initListener();
-        bindData();
-    }
-
-    @Override
     protected int getLayout() {
         return R.layout.activity_main;
     }
