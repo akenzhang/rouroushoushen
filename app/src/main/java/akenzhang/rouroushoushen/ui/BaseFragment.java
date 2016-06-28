@@ -42,6 +42,7 @@ public abstract class BaseFragment extends Fragment {
         initView();
         initVariable();
         initListener();
+        bindData();
     }
 
     /**

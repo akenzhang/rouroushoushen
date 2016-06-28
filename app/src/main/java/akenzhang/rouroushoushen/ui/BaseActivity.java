@@ -15,6 +15,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         initVariable();
         initListener();
+        bindData();
     }
 
     /**
