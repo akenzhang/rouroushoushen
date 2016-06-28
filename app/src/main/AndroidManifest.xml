@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Login"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".ui.Login" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".service.ServiceonClickActivity" />
+        <activity android:name=".service.ServiceIssueActivity"></activity>
     </application>
-
 
 </manifest>
