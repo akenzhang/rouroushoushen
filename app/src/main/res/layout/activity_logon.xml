@@ -71,5 +71,16 @@
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"/>
 
+        <Button
+            android:id="@+id/btn_qq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="QQ登录"
+            android:textColor="@color/color_me_bg"
+            android:background="@drawable/ic_read"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"/>
+
     </LinearLayout>
 </LinearLayout>

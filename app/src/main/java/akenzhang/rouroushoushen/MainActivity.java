@@ -1,8 +1,17 @@
 package akenzhang.rouroushoushen;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.support.v4.media.session.MediaSessionCompat;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
+import com.tencent.tauth.UiError;
+
+import org.json.JSONObject;
 
 import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
 import akenzhang.rouroushoushen.homepage.HomepageFragment;
@@ -25,7 +34,6 @@ public class MainActivity extends BaseActivity {
     private RadioButton btnHomeRelease; //home_tab_release
     private RadioButton btnHomeService; //home_tab_service
     private RadioButton btnHomeMe; //home_tab_me
-
 
     @Override
     protected int getLayout() {
@@ -66,7 +74,6 @@ public class MainActivity extends BaseActivity {
         //设置适配器
         viewpager.setOffscreenPageLimit(3);
         viewpager.setAdapter(adapter);
-
     }
 
     @Override
