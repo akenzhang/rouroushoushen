@@ -19,9 +19,10 @@
         </activity>
         <activity android:name=".ui.Login" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".service.ServiceonClickActivity" />
-        <activity android:name=".service.ServiceIssueActivity"></activity>
+        <activity android:name=".service.adapter.ServiceonClickActivity" />
+        <activity android:name=".service.IssueActivity.ServiceIssueActivity"></activity>
         <activity android:name=".me.ui.ItemMyStoreActivity"></activity>
+        <activity android:name=".service.GoAdapter.ServiceonClickgo"/>
     </application>
 
 </manifest>

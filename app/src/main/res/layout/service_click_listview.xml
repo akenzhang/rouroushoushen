@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/username"
+         >-->
+
+    <LinearLayout
+        android:background="#dad7d7"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  原来放文件头的位置 -->
+
+        <ListView
+            android:id="@+id/id_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </LinearLayout>
+
+
+    <!--</ScrollView>-->
+    <!-- android:background="@android:color/transparent" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/username"
+            android:text="akenzhang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -10,7 +10,7 @@ import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
 import akenzhang.rouroushoushen.homepage.HomepageFragment;
 import akenzhang.rouroushoushen.me.MeFragment;
 import akenzhang.rouroushoushen.release.ReleaseFragment;
-import akenzhang.rouroushoushen.service.ServiceFragment;
+import akenzhang.rouroushoushen.service.adapter.ServiceFragment;
 import akenzhang.rouroushoushen.ui.BaseActivity;
 import akenzhang.rouroushoushen.ui.CustomViewPager;
 import akenzhang.rouroushoushen.ui.MainActivityViewPagerAdapter;

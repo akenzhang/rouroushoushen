@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -12,6 +13,8 @@
         android:gravity="center"
         android:textSize="15dp"
         android:text="肉肉服务" />
+
+
     <LinearLayout
         android:id="@+id/dianji01"
         android:layout_width="match_parent"
@@ -36,7 +39,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="15dp"
                 android:layout_marginLeft="15dp"
-                android:textColor="#c25a5a"
+                android:textColor="#1b1b1b"
                 android:text="肉肉优选"/>
             <TextView
                 android:id="@+id/tv2"
@@ -69,7 +72,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="15dp"
                 android:layout_marginLeft="15dp"
-                android:textColor="#c25a5a"
+                android:textColor="#1b1b1b"
                 android:text="肉肉监督"/>
             <TextView
                 android:layout_width="wrap_content"

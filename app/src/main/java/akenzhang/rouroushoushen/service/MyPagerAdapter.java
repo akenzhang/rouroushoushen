@@ -1,6 +1,7 @@
 package akenzhang.rouroushoushen.service;
 
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +36,15 @@ public class MyPagerAdapter extends PagerAdapter{
         return view;
     }
 
+
+    /**
+     * 销毁预加载以外的view对象, 会把需要销毁的对象的索引位置传进来就是position
+     */
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         Log.e("------","positon:"+position);
         container.removeView(list.get(position));
     }
+
+
 }

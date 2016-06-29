@@ -4,8 +4,14 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="akenzhang.rouroushoushen.service.ServiceonClickActivity">
-
+    tools:context=".service.adapter.ServiceonClickActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -61,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="7dp"
             android:text="公告：肉肉发货时间为当天或次日，大部分地区1-3天送达!"
             android:textColor="#FF9E0B"
@@ -172,9 +178,180 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#5c5c5c"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        
+        <LinearLayout
 
-    </ListView>
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="400dp">
+            
+            <ImageView
+                android:id="@+id/tu1"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/b"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:text="狂减肚子刮油清肠荷叶茶【瘦身瘦腿通便】"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_height="50dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="8dp"
+                   android:textColor="#f90000"
+                   android:text="$ 16.90"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:layout_marginLeft="8dp"
+                   android:textSize="10dp"
+                   android:text="29.80"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="30dp"
+                   android:text="                                                            "/>
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="8dp"
+                   android:layout_centerVertical="true"
+                   android:src="@drawable/item_my_order"/>
+           </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:id="@+id/tu2"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/b"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:text="严格监督小队 (肉肉定制监督服务)"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#f90000"
+                    android:text="$ 32.00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="                                                                    "/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/item_my_order"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:id="@+id/tu3"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/b"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:text="【鼎轩】 仰卧起做器材健身家用运动拉力器..."/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#f90000"
+                    android:text="$ 32.00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="                                                                   "/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/item_my_order"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="400dp">
+
+            <ImageView
+                android:id="@+id/tu4"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/b"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:text="燃脂神器黑咖啡 越南进口提高新陈代谢"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#f90000"
+                    android:text="$ 15.00"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="10dp"
+                    android:text="原价：28.50"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="                                                           "/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/item_my_order"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
 </LinearLayout>

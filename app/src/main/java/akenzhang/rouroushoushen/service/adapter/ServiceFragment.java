@@ -1,4 +1,4 @@
-package akenzhang.rouroushoushen.service;
+package akenzhang.rouroushoushen.service.adapter;
 
 import android.content.Intent;
 import android.view.View;
