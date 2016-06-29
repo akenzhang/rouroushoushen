@@ -64,6 +64,7 @@ public class MainActivity extends BaseActivity {
         adapter.setmFragmentList(fragments);
 
         //设置适配器
+        viewpager.setOffscreenPageLimit(3);
         viewpager.setAdapter(adapter);
 
     }

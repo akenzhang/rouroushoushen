@@ -7,6 +7,15 @@ public class MyInfoBean {
     private int mImageID;
     private String mName;
     private int mNum;
+    private int mLevelImage;
+
+    public int getmLevelImage() {
+        return mLevelImage;
+    }
+
+    public void setmLevelImage(int mLevelImage) {
+        this.mLevelImage = mLevelImage;
+    }
 
     public int getmImageID() {
         return mImageID;
