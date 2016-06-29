@@ -75,12 +75,22 @@ public class MeFragment extends BaseFragment {
                 ,0
         };
 
+        int[] levelimages={
+                R.drawable.level_0
+                ,R.drawable.level_1
+                ,R.drawable.level_2
+                ,R.drawable.level_3
+                ,R.drawable.level_4
+        };
+
         for(int i=0;i<images.length;i++)
         {
             myInfoBean = new MyInfoBean();
+
             myInfoBean.setmImageID(images[i]);
             myInfoBean.setmName(names[i]);
             myInfoBean.setmNum(nums[i]);
+            myInfoBean.setmLevelImage(levelimages[0]); //这里hard code
 
             mMyInfoList.add(myInfoBean);
         }

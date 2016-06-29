@@ -38,11 +38,10 @@ public class MeCommonAdapter extends CommonAdapter {
         }
 
         //给我的等级赋值
-        //if(myInfoBean.getmName().equals("我的等级")){
-        //    ((ImageView)vh.getViews(R.id.id_pic_listview)).setImageResource(R.drawable.level_0);
-        //}
+        //这里给等级赋值
+        if(myInfoBean.getmName().equals("我的等级")){
+            ((ImageView)vh.getViews(R.id.id_pic_listview)).setImageResource(R.drawable.item_my_level);
+        }
 
-
-        //((ImageView)vh.getViews(R.id.id_back_listview)).setImageDrawable(null);
     }
 }
