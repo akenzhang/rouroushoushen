@@ -4,17 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.tencent.connect.common.Constants;
+import com.tencent.open.utils.HttpUtils;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
 
 import akenzhang.rouroushoushen.MainActivity;
 import akenzhang.rouroushoushen.R;
@@ -78,6 +82,30 @@ public class Login extends AppCompatActivity{
                 if (!TextUtils.isEmpty(openid)&&!TextUtils.isEmpty(expires_in)&&!TextUtils.isEmpty(token)){
                     mTencent.setOpenId(openid);
                     mTencent.setAccessToken(token,expires_in);
+
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            JSONObject json = null;
+                            try {
+                                json = mTencent.request(Constants.GRAPH_BASE, null, Constants.HTTP_GET);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            } catch (HttpUtils.NetworkUnavailableException e) {
+                                e.printStackTrace();
+                            } catch (HttpUtils.HttpStatusException e) {
+                                e.printStackTrace();
+                            }
+
+                            System.out.println(json);
+                            Log.e("===========",json.toString());
+
+                            //Toast.makeText(Login.this,json.toString(),Toast.LENGTH_SHORT).show();
+
+                        }
+                    }.start();
 
 
                     /*
