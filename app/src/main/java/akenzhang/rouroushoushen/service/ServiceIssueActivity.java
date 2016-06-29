@@ -10,6 +10,6 @@ public class ServiceIssueActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service_issue);
+        setContentView(R.layout.service_click_issue);
     }
 }

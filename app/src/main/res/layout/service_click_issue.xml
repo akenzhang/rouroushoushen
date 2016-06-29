@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context="akenzhang.rouroushoushen.service.ServiceIssueActivity">
 <RelativeLayout
     android:layout_width="match_parent"
@@ -14,9 +13,9 @@
         android:id="@+id/news_top_bar_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/b" />
+        android:src="@drawable/ic_article_page_back" />
     <TextView
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -24,7 +23,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="22dp"
         android:textColor="#FCFCFC"
-        android:textSize="15dp"
         android:text="返回" />
     <TextView
         android:id="@+id/news_top_bar_title"
@@ -32,17 +30,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textColor="#FCFCFC"
-        android:textSize="15dp"
         android:text="肉肉妞" />
+
 
     <ImageView
         android:id="@+id/news_top_bar_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="10dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/e" />
+        android:src="@drawable/ic_complain" />
 </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"

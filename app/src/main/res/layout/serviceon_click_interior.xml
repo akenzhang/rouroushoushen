@@ -14,9 +14,9 @@
         android:id="@+id/news_top_bar_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/b" />
+        android:src="@drawable/ic_article_page_back" />
     <TextView
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -24,7 +24,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="22dp"
         android:textColor="#FCFCFC"
-        android:textSize="15dp"
         android:text="返回" />
     <TextView
         android:id="@+id/news_top_bar_title"
@@ -32,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textColor="#FCFCFC"
-        android:textSize="15dp"
         android:text="肉肉优选" />
 
     <ImageView
@@ -42,16 +40,16 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="60dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/d" />
+        android:src="@drawable/ic_customer_service" />
 
     <ImageView
         android:id="@+id/news_top_bar_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="10dp"
         android:layout_centerVertical="true"
-        android:src="@drawable/b" />
+        android:src="@drawable/ic_complain" />
     </RelativeLayout>
 
     <LinearLayout
@@ -174,4 +172,9 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#5c5c5c"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 </LinearLayout>
