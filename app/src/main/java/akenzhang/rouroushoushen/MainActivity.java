@@ -1,14 +1,12 @@
 package akenzhang.rouroushoushen;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import akenzhang.rouroushoushen.discovery.DiscoveryFragment;
 import akenzhang.rouroushoushen.homepage.HomepageFragment;
-import akenzhang.rouroushoushen.me.MeFragment;
+import akenzhang.rouroushoushen.me.fragment.MeFragment;
 import akenzhang.rouroushoushen.release.ReleaseFragment;
 import akenzhang.rouroushoushen.service.adapter.ServiceFragment;
 import akenzhang.rouroushoushen.ui.BaseActivity;
