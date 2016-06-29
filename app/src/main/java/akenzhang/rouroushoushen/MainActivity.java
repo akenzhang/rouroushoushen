@@ -122,6 +122,23 @@ public class MainActivity extends BaseActivity {
 
             if(strFrag!=null) {
                 switch (strFrag) {
+
+                    case "0":
+                        viewpager.setCurrentItem(0, true);
+                        break;
+
+                    case "1":
+                        viewpager.setCurrentItem(1, true);
+                        break;
+
+                    case "2":
+                        viewpager.setCurrentItem(2, true);
+                        break;
+
+                    case "3":
+                        viewpager.setCurrentItem(3, true);
+                        break;
+
                     case "4":
                         viewpager.setCurrentItem(4, true);
                         break;
