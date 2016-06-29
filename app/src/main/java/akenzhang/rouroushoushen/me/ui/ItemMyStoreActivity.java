@@ -68,6 +68,7 @@ public class ItemMyStoreActivity extends BaseActivity {
     @Override
     protected void initListener() {
 
+        //跳转会先前页面
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

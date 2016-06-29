@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.List;
 import akenzhang.rouroushoushen.R;
 import akenzhang.rouroushoushen.me.bean.ItemMyStoreBean;
@@ -56,7 +58,7 @@ public class ItemMyStoreAdaper extends RecyclerView.Adapter<RecyclerView.ViewHol
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         if(holder instanceof StoreItemViewHolder){
-            ItemMyStoreBean  bean = mListItemBean.get(position);
+            final ItemMyStoreBean  bean = mListItemBean.get(position);
             StoreItemViewHolder storeHolder = (StoreItemViewHolder)holder;
 
             //赋值
@@ -66,6 +68,21 @@ public class ItemMyStoreAdaper extends RecyclerView.Adapter<RecyclerView.ViewHol
             storeHolder.mDescription02.setText(bean.getmDescription02());
             storeHolder.mScoreDescription01.setText(bean.getmScoreDescription01());
             storeHolder.mScoreDescription02.setText(bean.getmScoreDescription02());
+
+            //注册事件
+            storeHolder.mImageID01.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mContext,bean.getmImageID01(),Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            storeHolder.mImageID02.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mContext,bean.getmImageID02(),Toast.LENGTH_SHORT).show();
+                }
+            });
 
         }
     }
