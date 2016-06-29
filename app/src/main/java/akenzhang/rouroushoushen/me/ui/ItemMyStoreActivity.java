@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,8 @@ public class ItemMyStoreActivity extends BaseActivity {
     private ItemMyStoreAdaper adaper;
     private List<ItemMyStoreBean> mListItemBean;
     private LinearLayoutManager mLayoutManager;
-    private ImageView btn;
+    //private ImageView btn;
+    private RelativeLayout rl_my_store;
 
     @Override
     protected int getLayout() {
@@ -42,7 +45,8 @@ public class ItemMyStoreActivity extends BaseActivity {
     @Override
     protected void initView() {
         itemstore_recyclerview = (RecyclerView) this.findViewById(R.id.id_itemstore_recyclerview);
-        btn = (ImageView) this.findViewById(R.id.id_btn_my_item_store_back);
+        //btn = (ImageView) this.findViewById(R.id.id_btn_my_item_store_back);
+        rl_my_store = (RelativeLayout) this.findViewById(R.id.id_my_store);
     }
 
     @Override
@@ -69,19 +73,31 @@ public class ItemMyStoreActivity extends BaseActivity {
     protected void initListener() {
 
         //跳转会先前页面
+        /*
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ItemMyStoreActivity.this, MainActivity.class);
-                intent.putExtra("fragment","4");
-                startActivity(intent);
+                //Intent intent = new Intent(ItemMyStoreActivity.this, MainActivity.class);
+                //intent.putExtra("fragment","4");
+                //startActivity(intent);
+
+                //关闭当前页面
+                ItemMyStoreActivity.this.finish();
+            }
+        });
+        */
+
+        rl_my_store.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //关闭当前页面
+                ItemMyStoreActivity.this.finish();
             }
         });
     }
 
     @Override
     protected void bindData() {
-
 
     }
 }

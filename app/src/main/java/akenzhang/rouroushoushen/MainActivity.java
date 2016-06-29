@@ -115,6 +115,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void bindData() {
 
+        /*
         Intent intent = this.getIntent();
         if(intent!=null) {
 
@@ -148,6 +149,7 @@ public class MainActivity extends BaseActivity {
                 }
             }
         }
+        */
     }
 
 }

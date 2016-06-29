@@ -8,6 +8,15 @@ public class MyInfoBean {
     private String mName;
     private int mNum;
     private int mLevelImage;
+    private int mStoreImage;
+
+    public int getmStoreImage() {
+        return mStoreImage;
+    }
+
+    public void setmStoreImage(int mStoreImage) {
+        this.mStoreImage = mStoreImage;
+    }
 
     public int getmLevelImage() {
         return mLevelImage;

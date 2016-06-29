@@ -18,7 +18,7 @@ import akenzhang.rouroushoushen.me.ui.ItemMyStoreActivity;
  */
 public class MeCommonAdapter extends CommonAdapter {
 
-    Context context;
+    private Context context;
 
     public MeCommonAdapter(List list, int resId, Context context) {
         super(list, resId, context);
@@ -28,29 +28,33 @@ public class MeCommonAdapter extends CommonAdapter {
 
     @Override
     public void setContent(ViewHolder vh, Object item) {
-        MyInfoBean myInfoBean = (MyInfoBean)item;
-        ((ImageView)vh.getViews(R.id.id_image_listview)).setImageResource(((MyInfoBean)item).getmImageID());
-        ((TextView)vh.getViews(R.id.id_name_listview)).setText(myInfoBean.getmName());
+        MyInfoBean myInfoBean = (MyInfoBean) item;
+        ((ImageView) vh.getViews(R.id.id_image_listview)).setImageResource(((MyInfoBean) item).getmImageID());
+        ((TextView) vh.getViews(R.id.id_name_listview)).setText(myInfoBean.getmName());
 
-        if(myInfoBean.getmName().equals("我的消息")
+        if (myInfoBean.getmName().equals("我的消息")
                 || myInfoBean.getmName().equals("我的私信")
                 || myInfoBean.getmName().equals("我的等级")
                 || myInfoBean.getmName().equals("积分商城")
                 || myInfoBean.getmName().equals("我的订单")
-                || myInfoBean.getmName().equals("设置"))
-        {
-            ((TextView)vh.getViews(R.id.id_num_listview)).setText(null);
-        }else{
-            ((TextView)vh.getViews(R.id.id_num_listview)).setText(String.valueOf(myInfoBean.getmNum()));
+                || myInfoBean.getmName().equals("设置")) {
+            ((TextView) vh.getViews(R.id.id_num_listview)).setText(null);
+        } else {
+            ((TextView) vh.getViews(R.id.id_num_listview)).setText(String.valueOf(myInfoBean.getmNum()));
         }
 
-        //给我的等级赋值
-        //这里给等级赋值
-        if(myInfoBean.getmName().equals("我的等级")){
-            ((ImageView)vh.getViews(R.id.id_pic_listview)).setImageResource(R.drawable.level_0);
+        //这里给等级图片赋值
+        if (myInfoBean.getmName().equals("我的等级")) {
+            ((ImageView) vh.getViews(R.id.id_pic_listview)).setImageResource(myInfoBean.getmLevelImage());
+        }
+
+        //这里给积分商城图片赋值
+        if (myInfoBean.getmName().equals("积分商城")) {
+            ((ImageView) vh.getViews(R.id.id_pic_listview)).setImageResource(myInfoBean.getmStoreImage());
         }
 
         ((ImageView)vh.getViews(R.id.ic_back_listview)).setTag(myInfoBean.getmName());
+
 
         //ic_back_right 设置点击事件
         ((ImageView)vh.getViews(R.id.ic_back_listview)).setOnClickListener(new View.OnClickListener() {
@@ -72,6 +76,5 @@ public class MeCommonAdapter extends CommonAdapter {
                 }
             }
         });
-
     }
-}
+ }

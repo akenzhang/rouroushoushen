@@ -3,19 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-   <!-- <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/username"
-        >-->
-
         <LinearLayout
-            android:background="#dad7d7"
+            android:background="#ffffff"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <!--  原来放文件头的位置 -->
 
             <ListView
                 android:id="@+id/id_listview"
@@ -26,7 +18,6 @@
         </LinearLayout>
 
 
-    <!--</ScrollView>-->
     <!-- android:background="@android:color/transparent" -->
     <LinearLayout
         android:layout_width="match_parent"

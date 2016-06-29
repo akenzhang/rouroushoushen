@@ -83,6 +83,10 @@ public class MeFragment extends BaseFragment {
                 ,R.drawable.level_4
         };
 
+        int[] storeimages={
+            R.drawable.ic_plan_new
+        };
+
         for(int i=0;i<images.length;i++)
         {
             myInfoBean = new MyInfoBean();
@@ -91,6 +95,7 @@ public class MeFragment extends BaseFragment {
             myInfoBean.setmName(names[i]);
             myInfoBean.setmNum(nums[i]);
             myInfoBean.setmLevelImage(levelimages[0]); //这里hard code
+            myInfoBean.setmStoreImage(storeimages[0]);
 
             mMyInfoList.add(myInfoBean);
         }
