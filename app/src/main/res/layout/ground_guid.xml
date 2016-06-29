@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:layout_marginTop="10dp">
+    <RadioGroup
+        android:id="@+id/ground_guid"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/ground_plan"
+            style="@style/ground_guid"
+            android:drawableTop="@drawable/gc_ic_plan"
+            android:textColor="@drawable/home_radiobtn_homepage_text"
+            android:text="热门计划"/>
+        <RadioButton
+
+            android:id="@+id/ground_slimming"
+            style="@style/ground_guid"
+            android:drawableTop="@drawable/gc_ic_slimming"
+            android:textColor="@drawable/home_radiobtn_discovery_text"
+            android:text="减肥必读"/>
+        <RadioButton
+            android:id="@+id/ground_sport"
+            style="@style/ground_guid"
+            android:drawableTop="@drawable/gc_ic_sport"
+            android:textColor="@drawable/home_radiobtn_discovery_text"
+            android:text="运动指南"
+            />
+        <RadioButton
+            android:id="@+id/ground_suggest"
+            style="@style/ground_guid"
+            android:drawableTop="@drawable/gc_ic_suggest"
+            android:textColor="@drawable/home_radiobtn_service_text"
+            android:text="饮食建议"/>
+
+
+    </RadioGroup>
+
+</LinearLayout>
