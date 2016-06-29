@@ -44,7 +44,7 @@ public class MeFragment extends BaseFragment {
                 ,R.drawable.item_my_chat
                 ,R.drawable.item_my_level
                 ,R.drawable.item_my_score
-                ,R.drawable.item_my_score
+                ,R.drawable.item_my_store
                 ,R.drawable.item_my_order
                 ,R.drawable.item_my_tag
                 ,R.drawable.item_my_collection

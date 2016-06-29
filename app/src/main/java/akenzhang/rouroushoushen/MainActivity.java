@@ -1,5 +1,6 @@
 package akenzhang.rouroushoushen;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.widget.RadioButton;
@@ -11,11 +12,12 @@ import akenzhang.rouroushoushen.me.MeFragment;
 import akenzhang.rouroushoushen.release.ReleaseFragment;
 import akenzhang.rouroushoushen.service.ServiceFragment;
 import akenzhang.rouroushoushen.ui.BaseActivity;
+import akenzhang.rouroushoushen.ui.CustomViewPager;
 import akenzhang.rouroushoushen.ui.MainActivityViewPagerAdapter;
 
 public class MainActivity extends BaseActivity {
 
-    private ViewPager viewpager;
+    private CustomViewPager viewpager;
     private Fragment fragments[];
 
     //申明RadionButton对象
@@ -36,7 +38,7 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
 
         //初始化ViewPager viewpager
-        viewpager = (ViewPager) this.findViewById(R.id.viewpager);
+        viewpager = (CustomViewPager) this.findViewById(R.id.viewpager);
 
         //初始化RadioButton按钮
         rgHomeTab = (RadioGroup) this.findViewById(R.id.home_tab);
@@ -113,6 +115,22 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void bindData() {
 
+        Intent intent = this.getIntent();
+        if(intent!=null) {
+
+            String strFrag = intent.getStringExtra("fragment");
+
+            if(strFrag!=null) {
+                switch (strFrag) {
+                    case "4":
+                        viewpager.setCurrentItem(4, true);
+                        break;
+
+                    default:
+                        viewpager.setCurrentItem(0, true);
+                }
+            }
+        }
     }
 
 }
