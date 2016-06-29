@@ -39,10 +39,11 @@ public class MeFragment extends BaseFragment {
         MyInfoBean myInfoBean = null;
 
         int[] images={
-                R.drawable.item_my_message
-                ,R.drawable.item_my_record
+                R.drawable.item_my_record
+                ,R.drawable.item_my_message
                 ,R.drawable.item_my_chat
                 ,R.drawable.item_my_level
+                ,R.drawable.item_my_score
                 ,R.drawable.item_my_score
                 ,R.drawable.item_my_order
                 ,R.drawable.item_my_tag
@@ -50,7 +51,8 @@ public class MeFragment extends BaseFragment {
                 ,R.drawable.item_my_settings
         };
         String[] names = {
-                "我的消息"
+                "我的记录"
+                ,"我的消息"
                 ,"我的私信"
                 ,"我的等级"
                 ,"我的积分"
@@ -62,6 +64,7 @@ public class MeFragment extends BaseFragment {
         };
         int[] nums = {
                 0
+                ,0
                 ,0
                 ,0
                 ,0

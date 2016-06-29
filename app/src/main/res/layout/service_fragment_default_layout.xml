@@ -10,7 +10,7 @@
         android:textColor="#FCFCFC"
         android:background="#FF396D"
         android:gravity="center"
-        android:textSize="@dimen/category_item_text_size"
+        android:textSize="15dp"
         android:text="肉肉服务" />
     <LinearLayout
         android:id="@+id/dianji01"
@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
             android:onClick="onClickimg"
-            android:src="@drawable/weibo_normal"/>
+            android:src="@drawable/b"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -36,7 +36,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="15dp"
                 android:layout_marginLeft="15dp"
-                android:textColor="@color/background"
+                android:textColor="#c25a5a"
                 android:text="肉肉优选"/>
             <TextView
                 android:id="@+id/tv2"
@@ -58,7 +58,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/weibo_normal"/>
+            android:src="@drawable/d"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="20dp"
                 android:textSize="15dp"
                 android:layout_marginLeft="15dp"
-                android:textColor="@color/background"
+                android:textColor="#c25a5a"
                 android:text="肉肉监督"/>
             <TextView
                 android:layout_width="wrap_content"

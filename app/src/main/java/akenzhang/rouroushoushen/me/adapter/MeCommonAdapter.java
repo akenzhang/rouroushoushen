@@ -24,6 +24,25 @@ public class MeCommonAdapter extends CommonAdapter {
         MyInfoBean myInfoBean = (MyInfoBean)item;
         ((ImageView)vh.getViews(R.id.id_image_listview)).setImageResource(((MyInfoBean)item).getmImageID());
         ((TextView)vh.getViews(R.id.id_name_listview)).setText(myInfoBean.getmName());
-        ((TextView)vh.getViews(R.id.id_num_listview)).setText(String.valueOf(myInfoBean.getmNum()));
+
+        if(myInfoBean.getmName().equals("我的消息")
+                || myInfoBean.getmName().equals("我的私信")
+                || myInfoBean.getmName().equals("我的等级")
+                || myInfoBean.getmName().equals("积分商城")
+                || myInfoBean.getmName().equals("我的订单")
+                || myInfoBean.getmName().equals("设置"))
+        {
+            ((TextView)vh.getViews(R.id.id_num_listview)).setText(null);
+        }else{
+            ((TextView)vh.getViews(R.id.id_num_listview)).setText(String.valueOf(myInfoBean.getmNum()));
+        }
+
+        //给我的等级赋值
+        //if(myInfoBean.getmName().equals("我的等级")){
+        //    ((ImageView)vh.getViews(R.id.id_pic_listview)).setImageResource(R.drawable.level_0);
+        //}
+
+
+        //((ImageView)vh.getViews(R.id.id_back_listview)).setImageDrawable(null);
     }
 }
