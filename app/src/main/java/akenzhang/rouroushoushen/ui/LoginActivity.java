@@ -80,6 +80,7 @@ public class LoginActivity extends AppCompatActivity{
         }
 
     }
+
     public void login(View view){
 
         //点击登录按钮，进行用户名和密码的验证
