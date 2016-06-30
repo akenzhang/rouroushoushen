@@ -1,14 +1,18 @@
 package akenzhang.rouroushoushen.ui;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.tencent.connect.UserInfo;
 import com.tencent.connect.common.Constants;
 import com.tencent.open.utils.HttpUtils;
 import com.tencent.tauth.IUiListener;
@@ -32,6 +36,7 @@ public class Login extends AppCompatActivity{
     //QQ登陆
     private static String APP_ID="1105434609";
     private Tencent mTencent;
+    private UserInfo mUserInfo;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +54,7 @@ public class Login extends AppCompatActivity{
             public void onClick(View v) {
                 if (!mTencent.isSessionValid())
                 {
-                    mTencent.login(Login.this, "get_user_info", new BaseUiListener());
+                    mTencent.login(Login.this, "get_user_info", new LoginUiListener());
                 }
             }
         });
@@ -63,13 +68,13 @@ public class Login extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == Constants.REQUEST_LOGIN) {
-            mTencent.onActivityResultData(requestCode, resultCode, data, new BaseUiListener());
+            mTencent.onActivityResultData(requestCode, resultCode, data, new LoginUiListener());
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
     //实现QQ登陆的回调接口
-    class BaseUiListener implements IUiListener {
+    class LoginUiListener implements IUiListener {
 
         @Override
         public void onComplete(Object o) {
@@ -83,47 +88,47 @@ public class Login extends AppCompatActivity{
                     mTencent.setOpenId(openid);
                     mTencent.setAccessToken(token,expires_in);
 
-                    new Thread(){
+                    //拿到QQ用户的数据
+                    mUserInfo = new UserInfo(Login.this,mTencent.getQQToken());
+                    mUserInfo.getUserInfo(new IUiListener() {
                         @Override
-                        public void run() {
-                            JSONObject json = null;
+                        public void onComplete(Object o) {
+                            JSONObject json = (JSONObject)o;
+
                             try {
-                                json = mTencent.request(Constants.GRAPH_BASE, null, Constants.HTTP_GET);
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                                String nickname = json.getString("nickname");
+                                String image = json.getString("figureurl_qq_2");
+                                String gender = json.getString("gender");
+
+                                //将获取到的用户信息保存起来
+                                SharedPreferences mySharedPreferences = getSharedPreferences("akenzhang", Activity.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = mySharedPreferences.edit();
+                                editor.putString("nickname",nickname );
+                                editor.putString("image",image );
+                                editor.putString("gender",gender );
+                                editor.commit();
+
+                                //登录后跳转
+                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                startActivity(intent);
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                            } catch (HttpUtils.NetworkUnavailableException e) {
-                                e.printStackTrace();
-                            } catch (HttpUtils.HttpStatusException e) {
-                                e.printStackTrace();
                             }
-
-                            System.out.println(json);
-                            Log.e("===========",json.toString());
-
-                            //Toast.makeText(Login.this,json.toString(),Toast.LENGTH_SHORT).show();
-
                         }
-                    }.start();
 
+                        @Override
+                        public void onError(UiError uiError) {
+                            String strMsg = uiError.errorMessage;
+                        }
 
-                    /*
-                    mTencent.requestAsync(
-                            Constants.GRAPH_SIMPLE_USER_INFO
-                            , null
-                            , Constants.HTTP_GET
-                            ,new BaseApiListener("get_simple_userinfo", false)
-                            ,null);
-                      */
+                        @Override
+                        public void onCancel() {}
+                    });
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-            Intent intent = new Intent(Login.this, MainActivity.class);
-            startActivity(intent);
-
         }
 
         @Override
