@@ -6,6 +6,9 @@
 
     <color name="color_bottom_tab">#969FA9</color>
 
+    <color name="white">#ffffffff</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="red">#ffff0000</color>
     <color name="color_me_bg">#F9F9F9</color>
 </resources>
 

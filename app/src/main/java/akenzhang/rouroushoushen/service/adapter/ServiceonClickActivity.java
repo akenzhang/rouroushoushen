@@ -16,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import akenzhang.rouroushoushen.R;
-import akenzhang.rouroushoushen.service.GoAdapter.ServiceonClickgo;
-import akenzhang.rouroushoushen.service.IssueActivity.ServiceIssueActivity;
+
 import akenzhang.rouroushoushen.service.MyPagerAdapter;
 
 public class ServiceonClickActivity extends AppCompatActivity implements View.OnClickListener{
@@ -52,22 +51,9 @@ public class ServiceonClickActivity extends AppCompatActivity implements View.On
 
         back.setOnClickListener(this);
 
-        tu1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ServiceonClickActivity.this,ServiceonClickgo.class);
-                startActivity(intent);
-                ServiceonClickActivity.this.finish();
-            }
-        });
 
-        issue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ServiceonClickActivity.this,ServiceIssueActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
 
     }
 

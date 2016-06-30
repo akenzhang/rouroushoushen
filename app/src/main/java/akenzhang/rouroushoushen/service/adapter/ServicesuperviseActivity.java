@@ -1,4 +1,4 @@
-package akenzhang.rouroushoushen.service.GoAdapter;
+package akenzhang.rouroushoushen.service.adapter;
 
 import android.content.Intent;
 import android.os.SystemClock;
@@ -13,46 +13,40 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import akenzhang.rouroushoushen.MainActivity;
 import akenzhang.rouroushoushen.R;
 import akenzhang.rouroushoushen.service.MyPagerAdapter;
-import akenzhang.rouroushoushen.service.adapter.ServiceFragment;
-import akenzhang.rouroushoushen.service.adapter.ServiceonClickActivity;
 
-public class ServiceonClickgo extends AppCompatActivity implements View.OnClickListener{
+public class ServicesuperviseActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView goback;
-    private TextView goclose;
-    private ViewPager mViewPager;
+    private TextView superviseback;
+    private ViewPager superviseViewP;
     private List<View> list;
-    private int[] res = {R.drawable.b,R.drawable.d};
+    private int[] res = {R.drawable.b, R.drawable.d};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.serviceon_click_go);
+        setContentView(R.layout.service_supervise);
+        superviseback= (TextView) findViewById(R.id.superviseback);
 
-        mViewPager = (ViewPager) findViewById(R.id.goviewPg);
-        goback = (TextView) findViewById(R.id.goback);
-        goclose = (TextView) findViewById(R.id.goclose);
+        superviseViewP = (ViewPager) findViewById(R.id.superviseViewP);
 
         // 获取数据源
         getData();
         // 选择适配器
         MyPagerAdapter adapter = new MyPagerAdapter(list);
         // 设置适配器
-        mViewPager.setAdapter(adapter);
-        //自动轮播
+        superviseViewP.setAdapter(adapter);
+        //图片轮滑
         loadImage();
 
-        goback.setOnClickListener(this);
-        goclose.setOnClickListener(this);
+        superviseback.setOnClickListener(this);
     }
 
-    private void getData(){
+    private void getData() {
         list = new ArrayList<View>();
-        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
-        for (int i = 0; i< res.length;i++){
+        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        for (int i = 0; i < res.length; i++) {
             ImageView iv = new ImageView(this);
             iv.setImageResource(res[i]);
             iv.setLayoutParams(lp);
@@ -68,7 +62,7 @@ public class ServiceonClickgo extends AppCompatActivity implements View.OnClickL
             public void run() {
                 for (;;){
                     SystemClock.sleep(2000);
-                    mViewPager.setCurrentItem(intFlag, true);
+                    superviseViewP.setCurrentItem(intFlag, true);
                     if(intFlag==0) {
                         intFlag=1;
                     }
@@ -78,22 +72,11 @@ public class ServiceonClickgo extends AppCompatActivity implements View.OnClickL
             }
         }){
 
-    }.start();
+        }.start();
     }
 
     @Override
     public void onClick(View v) {
-
-        switch (v.getId()){
-            case R.id.goback:
-                Intent intent = new Intent(ServiceonClickgo.this,ServiceonClickActivity.class);
-                startActivity(intent);
-                ServiceonClickgo.this.finish();
-
-                break;
-            case R.id.goclose:
-                ServiceonClickgo.this.finish();
-                break;
-        }
+        ServicesuperviseActivity.this.finish();
     }
 }

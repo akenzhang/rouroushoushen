@@ -3,9 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <TextView
+        android:id="@+id/rourou"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textColor="#FCFCFC"
@@ -13,76 +12,15 @@
         android:gravity="center"
         android:textSize="15dp"
         android:text="肉肉服务" />
-
-
-    <LinearLayout
-        android:id="@+id/dianji01"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayout"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="80dp">
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:onClick="onClickimg"
-            android:src="@drawable/b"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="80dp">
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="15dp"
-                android:layout_marginLeft="15dp"
-                android:textColor="#1b1b1b"
-                android:text="肉肉优选"/>
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:text="精选各种好用，好吃不胖的优质商品"/>
-        </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="80dp">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/d"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="80dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="15dp"
-                android:layout_marginLeft="15dp"
-                android:textColor="#1b1b1b"
-                android:text="肉肉监督"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:text="私人定制减肥服务，减肥达人帮你瘦下来"/>
-        </LinearLayout>
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
-
+    </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>
