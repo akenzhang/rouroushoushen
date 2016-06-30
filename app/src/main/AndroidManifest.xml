@@ -25,6 +25,7 @@
         <activity android:name=".service.IssueActivity.ServiceIssueActivity"></activity>
         <activity android:name=".me.ui.ItemMyStoreActivity"></activity>
         <activity android:name=".service.GoAdapter.ServiceonClickgo"/>
+        <activity android:name=".ui.RegisterActivity"></activity>
 
         <activity
             android:name="com.tencent.tauth.AuthActivity"
