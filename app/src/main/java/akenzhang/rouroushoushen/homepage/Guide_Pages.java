@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import akenzhang.rouroushoushen.R;
-import akenzhang.rouroushoushen.homepage.ui.GuidPagerAdpter;
+import akenzhang.rouroushoushen.homepage.adapter.GuidPagerAdpter;
 import akenzhang.rouroushoushen.ui.BaseActivity;
 import akenzhang.rouroushoushen.ui.LoginActivity;
 

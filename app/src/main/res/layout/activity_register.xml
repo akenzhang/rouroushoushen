@@ -70,6 +70,7 @@
                 android:layout_height="50dp"
                 android:maxLength="11"
                 android:layout_weight="1"
+                android:textColorHint="#cdcdcd"
                 android:hint="请输入手机号码"
                 />
         </LinearLayout>
@@ -98,6 +99,7 @@
                 android:layout_height="50dp"
                 android:maxLength="11"
                 android:layout_weight="1"
+                android:textColorHint="#cdcdcd"
                 android:hint="请输入验证码(暂时输入888)"
                 />
         </LinearLayout>
@@ -126,6 +128,8 @@
                 android:layout_height="50dp"
                 android:maxLength="11"
                 android:layout_weight="1"
+                android:textColorHint="#cdcdcd"
+                android:inputType="textPassword"
                 android:hint="请输入密码(6-12个字符)"
                 />
         </LinearLayout>

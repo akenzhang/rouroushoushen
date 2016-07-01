@@ -25,7 +25,12 @@
         <activity android:name=".service.IssueActivity.ServiceIssueActivity"></activity>
         <activity android:name=".me.ui.ItemMyStoreActivity"></activity>
         <activity android:name=".service.GoAdapter.ServiceonClickgo"/>
+        <activity android:name=".ui.RegisterActivity"></activity>
+        <activity android:name=".ui.PWDChange01Activity"></activity>
+        <activity android:name=".ui.PWDChange02Activity"></activity>
+        <activity android:name=".ui.PWDChange03Activity"></activity>
 
+        <activity android:name=".homepage.fragment.HomeAdd"/>
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:noHistory="true"

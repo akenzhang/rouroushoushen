@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/id_my_store"
+        android:layout_marginTop="0dp"
+        android:background="#ff396d"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/id_btn_pwd_change_back"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back_white"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:text="重置密码"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_margin="18dp"
+        android:textSize="22sp"
+        android:text="请输入你注册时留下的手机号码，肉肉会发送一条短信验证码。"
+        android:textColor="#cdcdcd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:hint="请输入手机号码"
+        android:textSize="22sp"
+        android:textColorHint="#cdcdcd"
+        android:id="@+id/id_editview_pwd_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/id_btn_pwd_change"
+        android:background="@drawable/login_qq_gradient_bg"
+        android:layout_margin="18dp"
+        android:text="下一步"
+        android:textSize="22sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
