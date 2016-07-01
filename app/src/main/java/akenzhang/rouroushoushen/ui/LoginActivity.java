@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity{
 
     private EditText edloginphone;
     private EditText edloginpwd;
+    private TextView tvForgetPWD;
 
     private TextView tvLogin;
     private TextView tvRegister;
@@ -54,6 +55,15 @@ public class LoginActivity extends AppCompatActivity{
         edloginphone = (EditText) this.findViewById(R.id.id_login_phone);
         edloginpwd = (EditText) this.findViewById(R.id.id_login_pwd);
         ivRegisterqq = (ImageView) this.findViewById(R.id.id_register_qq);
+        tvForgetPWD = (TextView) this.findViewById(R.id.id_forget_pwd);
+
+        tvForgetPWD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,PWDChange01Activity.class);
+                startActivity(intent);
+            }
+        });
 
         ivRegisterqq.setOnClickListener(new View.OnClickListener() {
             @Override
