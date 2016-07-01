@@ -2,6 +2,8 @@ package akenzhang.rouroushoushen.discovery;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ import akenzhang.rouroushoushen.ui.BaseFragment;
  */
 public class DiscoveryFragment extends BaseFragment {
 
+    private ImageView idDiscoveryAdd;
     private List<String> titles;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -29,7 +32,7 @@ public class DiscoveryFragment extends BaseFragment {
     protected void initView() {
         viewPager= (ViewPager) root.findViewById(R.id.discovery_content);
         tabLayout = (TabLayout) root.findViewById(R.id.discovery_head);
-
+        idDiscoveryAdd= (ImageView) root.findViewById(R.id.id_discovery_add);
 
 
     }
@@ -41,7 +44,27 @@ public class DiscoveryFragment extends BaseFragment {
 
     @Override
     protected void initListener() {
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position==1){
+                    idDiscoveryAdd.setVisibility(View.VISIBLE);
+                }else{
+                    idDiscoveryAdd.setVisibility(View.GONE);
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     @Override

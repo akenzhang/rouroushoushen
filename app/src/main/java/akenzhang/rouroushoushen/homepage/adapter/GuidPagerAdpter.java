@@ -1,4 +1,4 @@
-package akenzhang.rouroushoushen.homepage.ui;
+package akenzhang.rouroushoushen.homepage.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
