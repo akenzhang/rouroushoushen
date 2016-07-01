@@ -1,9 +1,16 @@
 package akenzhang.rouroushoushen.me.fragment;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 import akenzhang.rouroushoushen.R;
@@ -20,6 +27,8 @@ public class MeFragment extends BaseFragment {
     private ListView listview;
     private View mHeaderView;
     List<MyInfoBean> mMyInfoList;
+    private TextView mUsername;
+    private ImageView mUserimageview;
 
     @Override
     protected int getLayout() {
@@ -28,8 +37,10 @@ public class MeFragment extends BaseFragment {
 
     @Override
     protected void initView() {
+        mUsername = (TextView) root.findViewById(R.id.username);
         listview = (ListView) root.findViewById(R.id.id_listview);
         mHeaderView = this.getActivity().getLayoutInflater().inflate(R.layout.me_fragment_default_listview_header_layout,null);
+        mUserimageview = (ImageView) mHeaderView.findViewById(R.id.id_user_imageview);
     }
 
     @Override
@@ -116,5 +127,19 @@ public class MeFragment extends BaseFragment {
     @Override
     protected void bindData() {
 
+        //获取SharedPreferences保存的QQ用户信息
+        SharedPreferences mySharedPreferences = this.getActivity().getSharedPreferences("akenzhang", Activity.MODE_PRIVATE);
+        if(mySharedPreferences!=null) {
+            String nickname = mySharedPreferences.getString("nickname", "");
+            String image = mySharedPreferences.getString("image", "");
+            String gender = mySharedPreferences.getString("gender", "");
+
+            if(!nickname.equals("")) {
+                //将获取到的QQ信息设置到界面
+                mUsername.setText(nickname + "(" + gender + ")");
+                //设置用户的图像
+                Picasso.with(this.getActivity()).load(image).into(mUserimageview);
+            }
+        }
     }
 }

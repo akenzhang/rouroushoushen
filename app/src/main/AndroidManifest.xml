@@ -22,27 +22,30 @@
         <activity android:name=".ui.Login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".service.adapter.ServiceonClickActivity" />
-        <activity android:name=".me.ui.ItemMyStoreActivity" />
+        <activity android:name=".service.IssueActivity.ServiceIssueActivity"></activity>
+        <activity android:name=".me.ui.ItemMyStoreActivity"></activity>
+        <activity android:name=".service.GoAdapter.ServiceonClickgo"/>
+
         <activity
             android:name="com.tencent.tauth.AuthActivity"
-            android:launchMode="singleTask"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data android:scheme="tencent1105434609" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
-            android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
-        <activity android:name=".service.adapter.ServicesuperviseActivity"></activity>
-        <activity android:name=".service.adapter.WebActivity"></activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>
+
+
     </application>
 
 </manifest>
