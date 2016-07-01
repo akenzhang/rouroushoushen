@@ -30,7 +30,7 @@ import akenzhang.rouroushoushen.R;
 /**
  * Created by Administrator on 2016/6/27 0027.
  */
-public class Login extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity{
 
     //QQ登陆
     private static String APP_ID="1105434609";
@@ -58,7 +58,7 @@ public class Login extends AppCompatActivity{
         ivRegisterqq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mTencent.login(Login.this, "get_user_info", new LoginUiListener());
+                mTencent.login(LoginActivity.this, "get_user_info", new LoginUiListener());
             }
         });
 
@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity{
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -80,6 +80,7 @@ public class Login extends AppCompatActivity{
         }
 
     }
+
     public void login(View view){
 
         //点击登录按钮，进行用户名和密码的验证
@@ -88,19 +89,19 @@ public class Login extends AppCompatActivity{
 
        if(strLoginPhone.equals("") )
         {
-            Toast.makeText(Login.this,"用户名不能为空~",Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,"用户名不能为空~",Toast.LENGTH_SHORT).show();
             return;
         }
 
         if( strPwd.equals(""))
         {
-            Toast.makeText(Login.this,"密码不能为空~",Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,"密码不能为空~",Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(!TextUtils.isDigitsOnly(strLoginPhone))
         {
-            Toast.makeText(Login.this,"手机号码不能带字符~",Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,"手机号码不能带字符~",Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -128,10 +129,10 @@ public class Login extends AppCompatActivity{
                         editor.putString("gender","未知" );
                         editor.commit();
 
-                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }else{
-                        Toast.makeText(Login.this,"用户名或者密码不正确，登陆失败！",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this,"用户名或者密码不正确，登陆失败！",Toast.LENGTH_SHORT).show();
                         return;
                     }
                 } catch (JSONException e) {
@@ -165,7 +166,7 @@ public class Login extends AppCompatActivity{
                     mTencent.setAccessToken(token,expires_in);
 
                     //拿到QQ用户的数据
-                    mUserInfo = new UserInfo(Login.this,mTencent.getQQToken());
+                    mUserInfo = new UserInfo(LoginActivity.this,mTencent.getQQToken());
                     mUserInfo.getUserInfo(new IUiListener() {
                         @Override
                         public void onComplete(Object o) {
@@ -185,7 +186,7 @@ public class Login extends AppCompatActivity{
                                 editor.commit();
 
                                 //登录后跳转
-                                Intent intent = new Intent(Login.this, MainActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
 
                             } catch (JSONException e) {
@@ -210,7 +211,7 @@ public class Login extends AppCompatActivity{
         @Override
         public void onError(UiError e) {
 
-            Toast.makeText(Login.this,e.errorMessage,Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,e.errorMessage,Toast.LENGTH_SHORT).show();
         }
 
         @Override

@@ -15,7 +15,7 @@ import java.util.List;
 import akenzhang.rouroushoushen.R;
 import akenzhang.rouroushoushen.homepage.ui.GuidPagerAdpter;
 import akenzhang.rouroushoushen.ui.BaseActivity;
-import akenzhang.rouroushoushen.ui.Login;
+import akenzhang.rouroushoushen.ui.LoginActivity;
 
 public class Guide_Pages extends BaseActivity {
 
@@ -68,7 +68,7 @@ public class Guide_Pages extends BaseActivity {
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            startActivity(new Intent(Guide_Pages.this,Login.class));
+                            startActivity(new Intent(Guide_Pages.this,LoginActivity.class));
                         }
                     });
                 }else{
